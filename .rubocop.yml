@@ -24,10 +24,12 @@ Style/Documentation:
 Style/ClassAndModuleChildren:
   Enabled: false
 Style/EachForSimpleLoop:
-  Enabled: true
+  Enabled: false
 Style/AndOr:
   Enabled: false
 Style/DefWithParentheses:
+  Enabled: false
+Style/For:
   Enabled: false
 Style/FrozenStringLiteralComment:
   EnforcedStyle: never

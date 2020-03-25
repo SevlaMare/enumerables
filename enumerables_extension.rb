@@ -7,4 +7,4 @@ module Enumerable
 end
 
 # check
-[1, 2, 3].my_each { |i| puts i}
+[1, 2, 3].my_each { |i| puts i }

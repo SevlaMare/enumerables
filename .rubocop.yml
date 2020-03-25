@@ -24,7 +24,7 @@ Style/Documentation:
 Style/ClassAndModuleChildren:
   Enabled: false
 Style/EachForSimpleLoop:
-  Enabled: false
+  Enabled: true
 Style/AndOr:
   Enabled: false
 Style/DefWithParentheses:

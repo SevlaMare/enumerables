@@ -8,18 +8,22 @@ Methods based on Enumerable package.
 ## Requirements
 
 <ul>
-  <h3>General</h3>
-  <li>Should have main page with a navbar.</li>
-  <li>Should have an about page.</li>
-  <li>Should have tickets page to buy the courses.</li>
-  <li>At least two breakpoints, boundaries in 768px.</li>
+  <h3>Re-make this methods of enumerate:</h3>
+  <li>#my_each</li>
+  <li>#my_each_with_index</li>
+  <li>#my_select</li>
+  <li>#my_all?</li>
+  <li>#my_any?</li>
+  <li>#my_none?</li>
+  <li>#my_count</li>
+  <li>#my_map</li>
+  <li>#my_inject</li>
 </ul>
 
 <ul>
-  <h3>Specific</h3>
-  <li>Use this colors: #272a31, #ec5242 and #d3d3d3</li>
-  <li>Typographies: font face, size and weight</li>
-  <li>Layout: composition and space between elements, for the 2 given screen sizes</li>
+  <h3>Extends</h3>
+  <li>Test inject with #multiply_els</li>
+  <li>Extends #my_map to</li>
 </ul>
 
 ## Built With

@@ -23,7 +23,7 @@ Methods based on Enumerable package.
 <ul>
   <h3>Extends</h3>
   <li>Test inject with #multiply_els</li>
-  <li>Extends #my_map to</li>
+  <li>Extends #my_map</li>
 </ul>
 
 ## Built With
@@ -67,5 +67,8 @@ Give a ⭐️ if you like this project!
 - A special thanks for the code reviewers.
 
 ## 📝 License
+
+Original version on 
+[Documentation](https://ruby-doc.org/core-2.7.0/Enumerable.html)
 
 <strong>Creative Commons</strong>

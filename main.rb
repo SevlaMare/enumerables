@@ -33,14 +33,18 @@ module Enumerable
     # future
   end
 
-
   def my_count(arg=nil)
     count = 0
-    if arg == nil
+
+    if block_given?
+      puts "check"
+
+    elsif arg == nil
       for i in self
         count += 1
       end
       return count
+
     elsif arg != nil
       for i in self
         if i == arg
@@ -50,7 +54,6 @@ module Enumerable
       return count
     end
   end
-
 
   def my_map
     # future

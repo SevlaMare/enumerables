@@ -19,9 +19,11 @@ module Enumerable
     filter
   end
 
-  def my_all?
-    # future
-  end
+  # def my_all?(arg=nil)
+  #   for i in self
+  #     return true if yield(i)
+  #   end
+  # end
 
   def my_any?
     # future
@@ -31,9 +33,24 @@ module Enumerable
     # future
   end
 
-  def my_count
-    # future
+
+  def my_count(arg=nil)
+    count = 0
+    if arg == nil
+      for i in self
+        count += 1
+      end
+      return count
+    elsif arg != nil
+      for i in self
+        if i == arg
+          count += 1
+        end
+      end
+      return count
+    end
   end
+
 
   def my_map
     # future

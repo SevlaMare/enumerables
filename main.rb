@@ -56,7 +56,11 @@ module Enumerable
   end
 
   def my_map
-    # future
+    lx = []
+    for count in 0..length-1
+      lx.push( yield(self[count]) )
+    end
+    return lx
   end
 
   def my_inject

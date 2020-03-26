@@ -1,6 +1,6 @@
 module Enumerable
   def my_each
-    for count in 0..length-1
+    for count in self
       yield(self[count])
     end
   end

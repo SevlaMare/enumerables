@@ -13,7 +13,7 @@ module Enumerable
     end
   end
 
-  # return elements which match block condition
+  # FILTER - return elements which match block condition
   def my_select
     filter = []
     my_each { |element| filter.push(element) if yield(element) }
@@ -37,5 +37,16 @@ module Enumerable
       my_each { |element| count += 1 if yield element }
     end
     count
+  end
+
+  # MAP
+  def my_map
+    map_list = []
+    my_each { |element| map_list.push( yield(element) ) }
+    map_list
+  end
+
+  # REDUCE
+  def my_inject
   end
 end

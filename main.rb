@@ -29,9 +29,9 @@ module Enumerable
       my_each { |element| count += 1 if element == num }
     
     # don't have block
-    elsif !num && !block_given?
-      count = self.length
-    
+    elsif !block_given?
+      count = length
+
     # don't have arg
     elsif !num
       my_each { |element| count += 1 if yield element }

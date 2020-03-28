@@ -27,19 +27,19 @@ and [Array](https://ruby-doc.org/core-2.4.1/Array.html#method-i-each)
   <h3>Re-make this methods of Enumerate module:</h3>
   <li>[x] my_each</li>
   <li>[x] my_each_with_index</li>
-  <li>[] my_select (Filter like)</li>
-  <li>[] my_all?</li>
-  <li>[] my_any?</li>
-  <li>[] my_none?</li>
-  <li>[] my_count</li>
-  <li>[] my_map</li>
-  <li>[] my_inject (Reduce like)</li>
+  <li>[x] my_select (Filter like)</li>
+  <li>[ ] my_all?</li>
+  <li>[ ] my_any?</li>
+  <li>[ ] my_none?</li>
+  <li>[ ] my_count</li>
+  <li>[ ] my_map</li>
+  <li>[ ] my_inject (Reduce like)</li>
 </ul>
 
 <ul>
   <h3>Extends</h3>
-  <li>[] Test inject with #multiply_els</li>
-  <li>[] Extends #my_map</li>
+  <li>[ ] Test inject with #multiply_els</li>
+  <li>[ ] Extends #my_map</li>
 </ul>
 
 ### Built With

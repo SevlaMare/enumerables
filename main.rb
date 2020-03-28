@@ -14,9 +14,7 @@ module Enumerable
   def my_select
     filter = []
     my_each do |element|
-      if yield(element)
-        filter.push(element)
-      end
+      filter.push(element) if yield(element)
     end
     filter
   end

@@ -13,9 +13,7 @@ module Enumerable
 
   def my_select
     filter = []
-    my_each { |element|
-      filter.push(element) if yield(element)
-    }
+    my_each { |element| filter.push(element) if yield(element) }
     filter
   end
 end

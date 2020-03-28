@@ -42,11 +42,12 @@ module Enumerable
   # MAP
   def my_map
     map_list = []
-    my_each { |element| map_list.push( yield(element) ) }
+    my_each { |element| map_list.push(yield(element)) }
     map_list
   end
 
   # REDUCE
   def my_inject
+    # next
   end
 end

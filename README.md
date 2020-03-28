@@ -15,9 +15,9 @@ and [Array](https://ruby-doc.org/core-2.4.1/Array.html#method-i-each)
 * [Live Demo](#live-demo)
 * [Getting Started](#getting-started)
 * [Dependencies](#dependencies)
-* [Author](#author)
 * [Contributing](#contributing)
 * [Acknowledgments](#acknowledgments)
+* [Author](#author)
 * [License](#license)
 
 
@@ -27,19 +27,19 @@ and [Array](https://ruby-doc.org/core-2.4.1/Array.html#method-i-each)
   <h3>Re-make this methods of Enumerate module:</h3>
   <li>[x] my_each</li>
   <li>[x] my_each_with_index</li>
-  <li>[o] my_select (Filter like)</li>
-  <li>[o] my_all?</li>
-  <li>[o] my_any?</li>
-  <li>[o] my_none?</li>
-  <li>[o] my_count</li>
-  <li>[o] my_map</li>
-  <li>[o] my_inject (Reduce like)</li>
+  <li>[checkbox:unchecked] my_select (Filter like)</li>
+  <li>[checkbox:unchecked] my_all?</li>
+  <li>[checkbox:unchecked] my_any?</li>
+  <li>[checkbox:unchecked] my_none?</li>
+  <li>[checkbox:unchecked] my_count</li>
+  <li>[checkbox:unchecked] my_map</li>
+  <li>[checkbox:unchecked] my_inject (Reduce like)</li>
 </ul>
 
 <ul>
   <h3>Extends</h3>
-  <li>[x] Test inject with #multiply_els</li>
-  <li>[x] Extends #my_map</li>
+  <li>[checkbox:unchecked] Test inject with #multiply_els</li>
+  <li>[checkbox:unchecked] Extends #my_map</li>
 </ul>
 
 ### Built With
@@ -60,15 +60,7 @@ To get a local copy up and running follow these steps.
 
 Ruby 2.5.5
 
-## Author
-
-👤 **Thiago Miranda**
-
-- Github: [@SevlaMare](https://github.com/SevlaMare)
-- Twitter: [#SevlaMare)](https://twitter.com/SevlaMare)
-- Linkedin: [SevlaMare)](https://www.linkedin.com/in/sevlamare)
-
-### 🤝 Contributing
+### Contributing
 
 Contributions, issues and feature requests are welcome!
 
@@ -78,6 +70,14 @@ Feel free to check the [issues page](issues/).
 
 - A special thanks for the code reviewers.
 
-### 📝 License
+## Author
+
+👤 **Thiago Miranda**
+
+- Github: [@SevlaMare](https://github.com/SevlaMare)
+- Twitter: [#SevlaMare)](https://twitter.com/SevlaMare)
+- Linkedin: [SevlaMare)](https://www.linkedin.com/in/sevlamare)
+
+### License
 
 <strong>Creative Commons</strong>

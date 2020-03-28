@@ -13,7 +13,7 @@ and [Array](https://ruby-doc.org/core-2.4.1/Array.html#method-i-each)
 * [Requirements](#requirements)
 * [Built With](#built-with)
 * [Live Demo](#live-demo)
-* [Getting Started](#getting-started)
+* [Quick Start](#quick-start)
 * [Dependencies](#dependencies)
 * [Contributing](#contributing)
 * [Acknowledgments](#acknowledgments)
@@ -27,19 +27,19 @@ and [Array](https://ruby-doc.org/core-2.4.1/Array.html#method-i-each)
   <h3>Re-make this methods of Enumerate module:</h3>
   <li>[x] my_each</li>
   <li>[x] my_each_with_index</li>
-  <li>[checkbox:unchecked] my_select (Filter like)</li>
-  <li>[checkbox:unchecked] my_all?</li>
-  <li>[checkbox:unchecked] my_any?</li>
-  <li>[checkbox:unchecked] my_none?</li>
-  <li>[checkbox:unchecked] my_count</li>
-  <li>[checkbox:unchecked] my_map</li>
-  <li>[checkbox:unchecked] my_inject (Reduce like)</li>
+  <li>[] my_select (Filter like)</li>
+  <li>[] my_all?</li>
+  <li>[] my_any?</li>
+  <li>[] my_none?</li>
+  <li>[] my_count</li>
+  <li>[] my_map</li>
+  <li>[] my_inject (Reduce like)</li>
 </ul>
 
 <ul>
   <h3>Extends</h3>
-  <li>[checkbox:unchecked] Test inject with #multiply_els</li>
-  <li>[checkbox:unchecked] Extends #my_map</li>
+  <li>[] Test inject with #multiply_els</li>
+  <li>[] Extends #my_map</li>
 </ul>
 
 ### Built With
@@ -52,9 +52,10 @@ and [Array](https://ruby-doc.org/core-2.4.1/Array.html#method-i-each)
 
 [Live Demo Link](https://repl.it/@ThiagoMiranda2/enumerables)
 
-## Getting Started
+## Quick Start
 
-To get a local copy up and running follow these steps.
+To get a local copy use:
+git clone git@github.com:SevlaMare/enumerables.git
 
 ### Dependencies
 
@@ -66,9 +67,9 @@ Contributions, issues and feature requests are welcome!
 
 Feel free to check the [issues page](issues/).
 
-### Acknowledgments
+## Acknowledgments
 
-- A special thanks for the code reviewers.
+A special thanks for the code reviewers.
 
 ## Author
 

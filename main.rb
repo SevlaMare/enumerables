@@ -10,4 +10,14 @@ module Enumerable
       yield(self[element], index)
     end
   end
+
+  def my_select
+    filter = []
+    my_each do |element|
+      if yield(element)
+        filter.push(element)
+      end
+    end
+    filter
+  end
 end

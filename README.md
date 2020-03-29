@@ -1,5 +1,5 @@
 # Enumerable Methods
-> Project to re-build a few built-in methods of Ruby Language.
+> Project to re-build a few methods of Ruby Language.
 
 ![screenshot](./images/screenshot.png)
 
@@ -24,22 +24,23 @@ and [Array](https://ruby-doc.org/core-2.4.1/Array.html#method-i-each)
 ## Requirements
 
 <ul>
-  <h3>Re-make this methods of Enumerate module:</h3>
+  <h3>Re-make this methods</h3>
+  <p>And match the return with documentation examples:</p>
   <li>[x] my_each</li>
   <li>[x] my_each_with_index</li>
   <li>[x] my_select (Filter like)</li>
   <li>[ ] my_all?</li>
   <li>[ ] my_any?</li>
   <li>[ ] my_none?</li>
-  <li>[ ] my_count</li>
-  <li>[ ] my_map</li>
+  <li>[x] my_count</li>
+  <li>[x] my_map</li>
   <li>[ ] my_inject (Reduce like)</li>
 </ul>
 
 <ul>
   <h3>Extends</h3>
   <li>[ ] Test inject with #multiply_els</li>
-  <li>[ ] Extends #my_map</li>
+  <li>[ ] Extends #my_map to accept procs</li>
 </ul>
 
 ### Built With

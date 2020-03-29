@@ -26,15 +26,15 @@ and [Array](https://ruby-doc.org/core-2.4.1/Array.html#method-i-each)
 <ul>
   <h3>Re-make this methods</h3>
   <p>And match the return with documentation examples:</p>
-  <li>[x] my_each</li>
-  <li>[x] my_each_with_index</li>
-  <li>[x] my_select (Filter like)</li>
-  <li>[ ] my_all?</li>
-  <li>[ ] my_any?</li>
-  <li>[ ] my_none?</li>
-  <li>[x] my_count</li>
-  <li>[x] my_map</li>
-  <li>[ ] my_inject (Reduce like)</li>
+  <li>[x] each</li>
+  <li>[x] each_with_index</li>
+  <li>[x] select (Filter like)</li>
+  <li>[ ] all?</li>
+  <li>[ ] any?</li>
+  <li>[ ] none?</li>
+  <li>[x] count</li>
+  <li>[x] map</li>
+  <li>[ ] inject (Reduce like)</li>
 </ul>
 
 <ul>
@@ -55,8 +55,10 @@ and [Array](https://ruby-doc.org/core-2.4.1/Array.html#method-i-each)
 
 ## Quick Start
 
-To get a local copy use:
+To get a local copy use:<br>
+```js
 git clone git@github.com:SevlaMare/enumerables.git
+```
 
 ### Dependencies
 

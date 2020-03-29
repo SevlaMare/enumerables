@@ -8,7 +8,7 @@ module Enumerable
 
   # iterate over array
   def my_each_with_index
-    for index in 0..length-1
+    for index in 0..length - 1
       yield(self[index], index)
     end
   end

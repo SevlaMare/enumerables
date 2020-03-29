@@ -20,6 +20,14 @@ module Enumerable
     filter
   end
 
+  # check if all array elements match given condition
+  # TODO - accept fx as argument
+  def my_all?(arg=nil)
+    lever = true
+    my_each { |element| lever = false if !yield(element) }
+    lever
+  end
+
   # count elements in object, allow one argument
   def my_count(num = nil)
     count = 0

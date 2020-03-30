@@ -31,6 +31,8 @@ Style/DefWithParentheses:
   Enabled: false
 Style/For:
   Enabled: false
+Style/CaseEquality:
+  Enabled: false
 Style/FrozenStringLiteralComment:
   EnforcedStyle: never
 

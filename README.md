@@ -26,32 +26,32 @@ and [Array](https://ruby-doc.org/core-2.4.1/Array.html#method-i-each)
 <ul>
   <h3>Re-make this methods</h3>
   <p>And match the return with documentation examples:</p>
-  <li>[x] each</li>
-  <li>[x] each_with_index</li>
-  <li>[x] select (Filter like)</li>
-  <li>[ ] all?</li>
-  <li>[ ] any?</li>
-  <li>[ ] none?</li>
-  <li>[x] count</li>
-  <li>[x] map</li>
-  <li>[ ] inject (Reduce like)</li>
+  <li>[x] .each</li>
+  <li>[x] .each_with_index</li>
+  <li>[x] .select (Filter like)</li>
+  <li>[ ] .all?</li>
+  <li>[ ] .any?</li>
+  <li>[ ] .none?</li>
+  <li>[x] .count</li>
+  <li>[x] .map</li>
+  <li>[ ] .inject (Reduce like)</li>
 </ul>
 
 <ul>
   <h3>Extends</h3>
-  <li>[ ] Test inject with #multiply_els</li>
-  <li>[ ] Extends #my_map to accept procs</li>
+  <li>[ ] Test .inject with .multiply_els</li>
+  <li>[ ] Extends .map to accept procs</li>
 </ul>
 
 ### Built With
 
 - Ruby Language <br>
-- Rubocop (Linter) with Stickler CI<br>
+- Rubocop (Linter) with Stickler CI <br>
 - Git, Github and VScode <br>
 
 ## Live Demo
 
-[Live Demo Link](https://repl.it/@ThiagoMiranda2/enumerables)
+[Run on Repl.it](https://repl.it/@ThiagoMiranda2/enumerables)
 
 ## Quick Start
 

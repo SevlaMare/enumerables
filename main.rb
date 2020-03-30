@@ -20,11 +20,19 @@ module Enumerable
     filter
   end
 
-  # check if all array elements match given condition
-  # TODO - accept fx as argument
-  def my_all?(arg=nil)
+  # check if all array elements match the given condition
+  def my_all?(*args)
     lever = true
-    my_each { |element| lever = false if !yield(element) }
+
+    # given class as arg, check if all elements belong to same class
+    if !args[0].nil?
+      my_each { |element| lever = false unless args[0] === element }
+    elsif !block_given?
+      my_each { |element| lever = false unless element }
+    elsif block_given?
+      my_each { |element| lever = false unless yield(element) }
+    end
+    
     lever
   end
 

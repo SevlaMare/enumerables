@@ -35,6 +35,23 @@ module Enumerable
     lever
   end
 
+  # kind all, but true if at least one element match condition
+  def my_any?(*arg)
+    lever = false
+    if !arg[0].nil?
+      my_each { |element| lever = true if arg[0] === element }
+    elsif !block_given?
+      my_each { |element| lever = true if element }
+    else
+      my_each { |element| lever = true if yield(element) }
+    end
+    lever
+  end
+
+  def my_none
+    # stuff
+  end
+
   # count elements in object, allow one argument
   def my_count(num = nil)
     count = 0

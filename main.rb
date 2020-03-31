@@ -1,15 +1,22 @@
 module Enumerable
   # loop over elements in array
   def my_each
-    # TODO change to while
+    # TODO: change to while
     for element in self
       yield(element)
+    end
+
+    # TODO: range don't have length
+    index = 0
+    while index < length
+      yield(self[index])
+      index += 1
     end
   end
 
   # iterate over array
   def my_each_with_index
-    # TODO change to while
+    # TODO: change to while
     for index in 0..length - 1
       yield(self[index], index)
     end
@@ -85,11 +92,9 @@ module Enumerable
   end
 
   # REDUCE like
-  def my_inject(operator=nil)
+  def my_inject(operator = nil)
     reduce = 0
-    my_each { |element|
-      reduce = element.send(operator, element)
-    }
+    my_each { |element| reduce = element.send(operator, element) }
     reduce
   end
 end

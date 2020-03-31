@@ -1,6 +1,7 @@
 module Enumerable
-  # loop over array
+  # loop over elements in array
   def my_each
+    # TODO change to while
     for element in self
       yield(element)
     end
@@ -8,6 +9,7 @@ module Enumerable
 
   # iterate over array
   def my_each_with_index
+    # TODO change to while
     for index in 0..length - 1
       yield(self[index], index)
     end
@@ -25,20 +27,23 @@ module Enumerable
     lever = true
     # given class as arg, check if all elements belong to same class
     if !args[0].nil?
-      my_each { |element| lever = false unless args[0] === element }
+      my_each { |element| lever = false unless args[0] === element } # instead of ifs
     elsif !block_given?
       my_each { |element| lever = false unless element }
     # given block
+    # Rubocop issue, else can allow unexpect edge case pass
     else
       my_each { |element| lever = false unless yield(element) }
     end
     lever
   end
 
-  # kind all, but true if at least one element match condition
+  # true if at least one element match condition
   def my_any?(*arg)
     lever = false
     if !arg[0].nil?
+      # Rubocop CaseEquality false, because explicity one case
+      # for every single class is not reasonable
       my_each { |element| lever = true if arg[0] === element }
     elsif !block_given?
       my_each { |element| lever = true if element }
@@ -48,8 +53,9 @@ module Enumerable
     lever
   end
 
-  def my_none
-    # stuff
+  # check if there is no one element with given conditions
+  def my_none?(arg = nil, &block)
+    !my_any?(arg, &block)
   end
 
   # count elements in object, allow one argument
@@ -71,15 +77,19 @@ module Enumerable
     count
   end
 
-  # MAP
+  # MAP like
   def my_map
     map_list = []
     my_each { |element| map_list.push(yield(element)) }
     map_list
   end
 
-  # REDUCE
-  def my_inject
-    # next
+  # REDUCE like
+  def my_inject(operator=nil)
+    reduce = 0
+    my_each { |element|
+      reduce = element.send(operator, element)
+    }
+    reduce
   end
 end

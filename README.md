@@ -3,7 +3,7 @@
 
 ![screenshot](./images/screenshot.png)
 
-<br>Methods based on Enumerable package.<br>
+<br>Methods based on Enumerable module and Array class.<br>
 Original version on [Enumerable](https://ruby-doc.org/core-2.7.0/Enumerable.html)
 and [Array](https://ruby-doc.org/core-2.4.1/Array.html#method-i-each)
 
@@ -25,21 +25,23 @@ and [Array](https://ruby-doc.org/core-2.4.1/Array.html#method-i-each)
 
 <ul>
   <h3>Re-make this methods</h3>
-  <p>And match the return with documentation examples:</p>
+  <p>And match the return with documentation expected behavior</p>
   <li>[x] .each</li>
+  <p>This is the only one that comes from Array class.
   <li>[x] .each_with_index</li>
   <li>[x] .select (Filter like)</li>
-  <li>[ ] .all?</li>
-  <li>[ ] .any?</li>
-  <li>[ ] .none?</li>
+  <li>[x] .all?</li>
+  <li>[x] .any?</li>
+  <li>[x] .none?</li>
   <li>[x] .count</li>
   <li>[x] .map</li>
   <li>[ ] .inject (Reduce like)</li>
 </ul>
 
 <ul>
-  <h3>Extends</h3>
-  <li>[ ] Test .inject with .multiply_els</li>
+  <h3>Additional features</h3>
+  <li>[ ] Create .multiply_els to test .inject</li>
+  <p>Should multiply all the elements of array together</p>
   <li>[ ] Extends .map to accept procs</li>
 </ul>
 

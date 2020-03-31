@@ -2,7 +2,6 @@ module Enumerable
   # loop over elements in array
   def my_each
     # convert range to array so can use length
-    # need var, because don't wanna overwritte self
     list = Range ? to_a : self
     i = 0
     while i < list.length

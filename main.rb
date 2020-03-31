@@ -1,17 +1,16 @@
 module Enumerable
   # loop over elements in array
   def my_each
-    # TODO: change to while
-    for element in self
-      yield(element)
+    # convert range to array so can use length
+    # need var, because don't wanna overwritte self
+    list = Range ? to_a : self
+    i = 0
+    while i < list.length
+      yield(list[i])
+      i += 1
     end
-
-    # TODO: range don't have length
-    index = 0
-    while index < length
-      yield(self[index])
-      index += 1
-    end
+    # explicity return otherwise nil
+    list
   end
 
   # iterate over array

@@ -3,6 +3,7 @@ module Enumerable
   def my_each
     # convert range to array so can use length
     list = Range ? to_a : self
+
     i = 0
     while i < list.length
       yield(list[i])
@@ -12,12 +13,9 @@ module Enumerable
     list
   end
 
-  # iterate over array
+  # iterate over an array
   def my_each_with_index
-    # TODO: change to while
-    for index in 0..length - 1
-      yield(self[index], index)
-    end
+    my_each { |element, index| yield(element, index) }
   end
 
   # FILTER - return elements which match block condition

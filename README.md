@@ -4,7 +4,7 @@
 ![screenshot](./images/screenshot.png)
 
 <br>Methods based on Enumerable module and Array class.<br>
-Original version on [Enumerable](https://ruby-doc.org/core-2.7.0/Enumerable.html)
+As described on documentation here [Enumerable](https://ruby-doc.org/core-2.7.0/Enumerable.html)
 and [Array](https://ruby-doc.org/core-2.4.1/Array.html#method-i-each)
 
 
@@ -24,18 +24,17 @@ and [Array](https://ruby-doc.org/core-2.4.1/Array.html#method-i-each)
 ## Requirements
 
 <ul>
-  <h3>Re-make this methods</h3>
-  <p>And match the return with documentation expected behavior</p>
-  <li>[x] .each</li>
-  <p>This is the only one that comes from Array class.
+  <h3>Features</h3>
+  <p>Re-make these methods and match with documentation expected behavior</p>
+  <li>[x] .each (Only one from Array)</li>
   <li>[x] .each_with_index</li>
-  <li>[x] .select (Filter like)</li>
+  <li>[x] .select - Filter like</li>
   <li>[x] .all?</li>
   <li>[x] .any?</li>
   <li>[x] .none?</li>
   <li>[x] .count</li>
   <li>[x] .map</li>
-  <li>[ ] .inject (Reduce like)</li>
+  <li>[ ] .inject - Reduce like</li>
 </ul>
 
 <ul>
@@ -48,7 +47,7 @@ and [Array](https://ruby-doc.org/core-2.4.1/Array.html#method-i-each)
 ### Built With
 
 - Ruby Language <br>
-- Rubocop (Linter) with Stickler CI <br>
+- Rubocop (Linter) with Stickler (CI Tool)<br>
 - Git, Github and VScode <br>
 
 ## Live Demo
@@ -70,7 +69,7 @@ Ruby 2.5.5
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+You can do it on [issues page](issues/).
 
 ## Acknowledgments
 

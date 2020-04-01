@@ -107,21 +107,11 @@ module Enumerable
   # REDUCE like
   def my_inject(*args)
     list = Range ? to_a : self
-
-    # start at first element not zero
     reduce = args[0] if args[0].is_a?(Integer)
-
-    # find Symbols on args
-    # advance voodoo by linter cyclomatics
-    operator = if args[0].is_a?(Symbol)
-      args[0]
-    else
-      args[1]
-    end
+    operator = args[0].is_a?(Symbol) ? args[0] : args[1]
 
     if operator
       list.my_each { |item| reduce = reduce ? reduce.send(operator, item) : item }
-    # elsif block_given?
     else
       list.my_each { |item| reduce = reduce ? yield(reduce, item) : item }
     end

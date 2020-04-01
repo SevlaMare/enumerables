@@ -2,7 +2,7 @@ module Enumerable
   # loop over array
   def my_each
     # If no block is given, an Enumerator is returned
-    return enum_for if !block_given?
+    return enum_for unless block_given?
 
     # convert range to array so can use length
     list = Range ? to_a : self
@@ -12,14 +12,13 @@ module Enumerable
       yield(list[count])
       count += 1
     end
-
     # explicity return otherwise nil
     list
   end
 
   # loop over elements an index of an array
   def my_each_with_index
-    return enum_for if !block_given?
+    return enum_for unless block_given?
     list = Range ? to_a : self
 
     count = 0

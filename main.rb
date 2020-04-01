@@ -111,13 +111,6 @@ module Enumerable
     # start at first element not zero
     reduce = args[0] if args[0].is_a?(Integer)
 
-    # find Symbols on args
-    if args[0].is_a?(Symbol)
-      operator = args[0]
-    elsif args[0].is_a?(Integer)
-      operator = args[1]
-    end
-
     if operator
       list.my_each { |item| reduce = reduce ? reduce.send(operator, item) : item }
     # elsif block_given?

@@ -98,7 +98,7 @@ module Enumerable
   # MAP like
   def my_map
     return enum_for unless block_given?
-    
+
     map_list = []
     my_each { |element| map_list.push(yield(element)) }
     map_list

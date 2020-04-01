@@ -112,11 +112,11 @@ module Enumerable
     reduce = args[0] if args[0].is_a?(Integer)
 
     # find Symbols on args
-    if args[0].is_a?(Symbol)
-      operator = args[0]
-    #elsif args[0].is_a?(Integer)
+    # advance voodoo by linter cyclomatics
+    operator = if args[0].is_a?(Symbol)
+      args[0]
     else
-      operator = args[1]
+      args[1]
     end
 
     if operator

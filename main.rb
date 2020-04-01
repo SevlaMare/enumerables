@@ -45,7 +45,7 @@ module Enumerable
     lever = true
     # given class as arg, check if all elements belong to same class
     if !args[0].nil?
-      my_each { |element| lever = false unless args[0] === element } # instead of ifs
+      my_each { |element| lever = false unless args[0] === element }
     elsif !block_given?
       my_each { |element| lever = false unless element }
     # given block
@@ -105,9 +105,19 @@ module Enumerable
   end
 
   # REDUCE like
-  def my_inject(operator = nil)
-    reduce = 0
-    my_each { |element| reduce = element.send(operator, element) }
-    reduce
+  # TODO: cover more edge cases related to nil and none
+  # like [].inject... and inject {}
+  def my_inject(*args)
+    list = self
+    #operator = args[0]
+    if (args[0].class == Symbol) then operator = args[0] else nil end
+    
+    if operator
+      # dont start at zero, start first element
+      reduce = list[0]
+      # since start 1 not 0, loop should start there
+      list[1..-1].my_each { |item| reduce = reduce.send(operator, item) }
+      reduce
+    end
   end
 end

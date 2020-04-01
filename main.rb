@@ -115,7 +115,7 @@ module Enumerable
       list[1..-1].my_each { |item| reduce = reduce.send(operator, item) }
       reduce
     else
-      puts "comming soon"
+      puts 'comming soon'
     end
   end
 end

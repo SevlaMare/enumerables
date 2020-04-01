@@ -32,6 +32,9 @@ module Enumerable
 
   # FILTER - return elements which match block condition
   def my_select
+    # again since my_each only trigger when have block
+    return enum_for unless block_given?
+
     filter = []
     my_each { |element| filter.push(element) if yield(element) }
     filter

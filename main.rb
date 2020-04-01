@@ -108,7 +108,12 @@ module Enumerable
   def my_inject(*args)
     list = Range ? to_a : self
     reduce = args[0] if args[0].is_a?(Integer)
+
+    # rubocop:disable Metrics/CyclomaticComplexity
+    # rubocop:disable Metrics/PerceivedComplexity
     operator = args[0].is_a?(Symbol) ? args[0] : args[1]
+    # rubocop:enable Metrics/CyclomaticComplexity
+    # rubocop:enable Metrics/PerceivedComplexity
 
     if operator
       list.my_each { |item| reduce = reduce ? reduce.send(operator, item) : item }

@@ -108,14 +108,22 @@ module Enumerable
   def my_inject(*args)
     list = Range ? to_a : self
 
-    operator = args[0] if args[0].class == Symbol
+    # start at first element not zero
+    reduce = args[0] if args[0].is_a?(Integer)
+
+    # find Symbols on args
+    if args[0].is_a?(Symbol)
+      operator = args[0]
+    elsif args[0].is_a?(Integer)
+      operator = args[1]
+    end
 
     if operator
-      reduce = list[0]
-      list[1..-1].my_each { |item| reduce = reduce.send(operator, item) }
-      reduce
+      list.my_each { |item| reduce = reduce ? reduce.send(operator, item) : item }
+    # elsif block_given?
     else
-      puts 'comming soon'
+      list.my_each { |item| reduce = reduce ? yield(reduce, item) : item }
     end
+    reduce
   end
 end

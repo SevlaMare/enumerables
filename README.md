@@ -27,22 +27,22 @@ and [Array](https://ruby-doc.org/core-2.4.1/Array.html#method-i-each)
 <ul>
   <h3>Features</h3>
   <p>Re-make these methods and match with documentation expected behavior</p>
-  <li>[x] .each (Only one from Array)</li>
-  <li>[x] .each_with_index</li>
-  <li>[x] .select (Filter like)</li>
-  <li>[x] .all?</li>
-  <li>[x] .any?</li>
-  <li>[x] .none?</li>
-  <li>[x] .count</li>
-  <li>[x] .map</li>
-  <li>[ ] .inject (Reduce like)</li>
+  <li>.each (Only one from Array)</li>
+  <li>.each_with_index</li>
+  <li>.select (Filter like)</li>
+  <li>.all?</li>
+  <li>.any?</li>
+  <li>.none?</li>
+  <li>.count</li>
+  <li>.map</li>
+  <li>.inject (Reduce like)</li>
 </ul>
 
 <ul>
   <h3>Additional features</h3>
-  <li>[ ] Create .multiply_els to test .inject</li>
+  <li>Create .multiply_els to test .inject</li>
   <p>Should multiply all the elements of array together</p>
-  <li>[ ] Extends .map to accept procs</li>
+  <li>Extends .map to accept procs</li>
 </ul>
 
 ### Built With

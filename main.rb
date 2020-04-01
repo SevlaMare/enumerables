@@ -107,13 +107,15 @@ module Enumerable
   # REDUCE like
   def my_inject(*args)
     list = Range ? to_a : self
-    
+
     operator = args[0] if args[0].class == Symbol
 
     if operator
       reduce = list[0]
       list[1..-1].my_each { |item| reduce = reduce.send(operator, item) }
       reduce
+    else
+      puts "comming soon"
     end
   end
 end

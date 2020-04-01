@@ -1,21 +1,33 @@
 module Enumerable
-  # loop over elements in array
+  # loop over array
   def my_each
+    # If no block is given, an Enumerator is returned
+    return enum_for if !block_given?
+
     # convert range to array so can use length
     list = Range ? to_a : self
 
-    i = 0
-    while i < list.length
-      yield(list[i])
-      i += 1
+    count = 0
+    while count < list.length
+      yield(list[count])
+      count += 1
     end
+
     # explicity return otherwise nil
     list
   end
 
-  # iterate over an array
+  # loop over elements an index of an array
   def my_each_with_index
-    my_each { |element, index| yield(element, index) }
+    return enum_for if !block_given?
+    list = Range ? to_a : self
+
+    count = 0
+    while count < list.length
+      yield(self[count], count)
+      count += 1
+    end
+    list
   end
 
   # FILTER - return elements which match block condition

@@ -28,13 +28,13 @@ and [Array](https://ruby-doc.org/core-2.4.1/Array.html#method-i-each)
   <p>Re-make these methods and match with documentation expected behavior</p>
   <li>[x] .each (Only one from Array)</li>
   <li>[x] .each_with_index</li>
-  <li>[x] .select - Filter like</li>
+  <li>[x] .select (Filter like)</li>
   <li>[x] .all?</li>
   <li>[x] .any?</li>
   <li>[x] .none?</li>
   <li>[x] .count</li>
   <li>[x] .map</li>
-  <li>[ ] .inject - Reduce like</li>
+  <li>[ ] .inject (Reduce like)</li>
 </ul>
 
 <ul>

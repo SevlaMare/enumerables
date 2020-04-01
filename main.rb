@@ -19,7 +19,7 @@ module Enumerable
   # loop over elements an index of an array
   def my_each_with_index
     return enum_for unless block_given?
-    
+
     list = Range ? to_a : self
 
     count = 0

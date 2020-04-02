@@ -1,3 +1,5 @@
+# rubocop:disable Style/CaseEquality
+
 module Enumerable
   # loop over array
   def my_each
@@ -131,3 +133,4 @@ end
 def multiply_els(list)
   list.my_inject(:*)
 end
+# rubocop:enable Style/CaseEquality

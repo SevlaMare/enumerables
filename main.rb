@@ -96,11 +96,15 @@ module Enumerable
   end
 
   # MAP like
-  def my_map
+  def my_map(proc_x = nil)
     return enum_for unless block_given?
 
     map_list = []
-    my_each { |element| map_list.push(yield(element)) }
+    if proc_x.nil?
+      my_each { |element| map_list.push(yield(element)) }
+    else
+      my_each { |element| map_list.push(proc_x.call(element)) }
+    end
     map_list
   end
 

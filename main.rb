@@ -118,3 +118,8 @@ module Enumerable
     reduce
   end
 end
+
+# method to test my_inject
+def multiply_els(list)
+  list.my_inject { |reduce, element| reduce * element }
+end

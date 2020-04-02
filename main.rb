@@ -5,7 +5,7 @@ module Enumerable
     return enum_for unless block_given?
 
     # convert range to array so can use length
-    list = Range ? to_a : self
+    list = to_a if Range
 
     count = 0
     while count < list.length
@@ -20,7 +20,7 @@ module Enumerable
   def my_each_with_index
     return enum_for unless block_given?
 
-    list = Range ? to_a : self
+    list = to_a if Range
 
     count = 0
     while count < list.length
@@ -110,7 +110,7 @@ module Enumerable
 
   # REDUCE like
   def my_inject(*args)
-    list = Range ? to_a : self
+    list = to_a if Range
     reduce = args[0] if args[0].is_a?(Integer)
     operator = args[0].is_a?(Symbol) ? args[0] : args[1]
 

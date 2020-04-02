@@ -1,10 +1,10 @@
 module Enumerable
   # loop over array
   def my_each
-    # If no block is given, an Enumerator is returned
+    # If no block is given, an Enumerator is returned.
     return enum_for unless block_given?
 
-    # convert range to array so can use length
+    # Convert range to array so can use length.
     list = to_a if Range
 
     count = 0
@@ -12,11 +12,11 @@ module Enumerable
       yield(list[count])
       count += 1
     end
-    # explicity return otherwise nil
+    # Explicity return otherwise nil
     list
   end
 
-  # loop over elements an index of an array
+  # Loop over elements an index of an array.
   def my_each_with_index
     return enum_for unless block_given?
 
@@ -30,7 +30,7 @@ module Enumerable
     list
   end
 
-  # FILTER - return elements which match block condition
+  # FILTER - return elements which match block condition.
   def my_select
     # again since my_each only trigger when have block
     return enum_for unless block_given?
@@ -40,7 +40,7 @@ module Enumerable
     filter
   end
 
-  # check if all array elements match the given condition
+  # Check if all array elements match the given condition.
   def my_all?(*args)
     lever = true
     # given class as arg, check if all elements belong to same class
@@ -56,7 +56,7 @@ module Enumerable
     lever
   end
 
-  # true if at least one element match condition
+  # true if at least one element match condition.
   def my_any?(*arg)
     lever = false
     if !arg[0].nil?
@@ -71,12 +71,12 @@ module Enumerable
     lever
   end
 
-  # check if there is no one element with given conditions
+  # Check if there is no one element with given conditions.
   def my_none?(arg = nil, &block)
     !my_any?(arg, &block)
   end
 
-  # count elements in object, allow one argument
+  # Count elements in object, allow one argument.
   def my_count(num = nil)
     count = 0
 
@@ -109,6 +109,9 @@ module Enumerable
   end
 
   # REDUCE like
+  # Cyclomatic Complexity is just one point above [7/6],
+  # And it's already reduce the maximum I can, without split method.
+  # rubocop:disable Metrics/CyclomaticComplexity
   def my_inject(*args)
     list = to_a if Range
     reduce = args[0] if args[0].is_a?(Integer)
@@ -121,9 +124,10 @@ module Enumerable
     list.my_each { |item| reduce = reduce ? yield(reduce, item) : item }
     reduce
   end
+  # rubocop:enable Metrics/CyclomaticComplexity
 end
 
-# method to test my_inject
+# Method to test my_inject.
 def multiply_els(list)
   list.my_inject(:*)
 end

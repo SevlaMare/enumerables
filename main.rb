@@ -1,11 +1,8 @@
 # rubocop:disable Style/CaseEquality
 module Enumerable
-  # loop over array
   def my_each
-    # If no block is given, an Enumerator is returned.
     return enum_for unless block_given?
 
-    # Convert range to array so can use length.
     list = is_a?(Range) ? to_a : self
 
     count = 0
@@ -13,11 +10,9 @@ module Enumerable
       yield(list[count])
       count += 1
     end
-    # Explicity return otherwise nil
     list
   end
 
-  # Loop over elements an index of an array.
   def my_each_with_index
     return enum_for unless block_given?
 
@@ -31,9 +26,8 @@ module Enumerable
     list
   end
 
-  # FILTER - return elements which match block condition.
+  # FILTER like
   def my_select
-    # again since my_each only trigger when have block
     return enum_for unless block_given?
 
     filter = []
@@ -41,28 +35,21 @@ module Enumerable
     filter
   end
 
-  # Check if all array elements match the given condition.
   def my_all?(*args)
     lever = true
-    # given class as arg, check if all elements belong to same class
     if !args[0].nil?
       my_each { |element| lever = false unless args[0] === element }
     elsif !block_given?
       my_each { |element| lever = false unless element }
-    # given block
-    # Rubocop issue, else can allow unexpect edge case pass
     else
       my_each { |element| lever = false unless yield(element) }
     end
     lever
   end
 
-  # true if at least one element match condition.
   def my_any?(*arg)
     lever = false
     if !arg[0].nil?
-      # Rubocop CaseEquality false, because explicity one case
-      # for every single class is not reasonable
       my_each { |element| lever = true if arg[0] === element }
     elsif !block_given?
       my_each { |element| lever = true if element }
@@ -72,31 +59,22 @@ module Enumerable
     lever
   end
 
-  # Check if there is no one element with given conditions.
   def my_none?(arg = nil, &block)
     !my_any?(arg, &block)
   end
 
-  # Count elements in object, allow one argument.
   def my_count(num = nil)
     count = 0
-
-    # has arg
     if num
       my_each { |element| count += 1 if element == num }
-
-    # don't have block
     elsif !block_given?
       count = length
-
-    # don't have arg
     elsif !num
       my_each { |element| count += 1 if yield element }
     end
     count
   end
 
-  # MAP like
   def my_map(proc_x = nil)
     return enum_for unless block_given?
 
@@ -109,9 +87,6 @@ module Enumerable
     map_list
   end
 
-  # REDUCE like
-  # Cyclomatic Complexity is just one point above [7/6],
-  # And it's already reduce the maximum I can, without split method.
   # rubocop:disable Metrics/CyclomaticComplexity
   def my_inject(*args)
     list = is_a?(Range) ? to_a : self
@@ -129,7 +104,7 @@ module Enumerable
   # rubocop:enable Metrics/CyclomaticComplexity
 end
 
-# Method to test my_inject.
+# Test my_inject
 def multiply_els(list)
   list.my_inject(:*)
 end

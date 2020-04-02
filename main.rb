@@ -116,9 +116,9 @@ module Enumerable
 
     if operator
       list.my_each { |item| reduce = reduce ? reduce.send(operator, item) : item }
-    else
-      list.my_each { |item| reduce = reduce ? yield(reduce, item) : item }
+      return reduce
     end
+    list.my_each { |item| reduce = reduce ? yield(reduce, item) : item }
     reduce
   end
 end

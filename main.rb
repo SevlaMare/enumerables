@@ -1,5 +1,4 @@
 # rubocop:disable Style/CaseEquality
-
 module Enumerable
   # loop over array
   def my_each
@@ -7,7 +6,7 @@ module Enumerable
     return enum_for unless block_given?
 
     # Convert range to array so can use length.
-    list = to_a if Range
+    list = is_a?(Range) ? to_a : self
 
     count = 0
     while count < list.length
@@ -22,7 +21,7 @@ module Enumerable
   def my_each_with_index
     return enum_for unless block_given?
 
-    list = to_a if Range
+    list = is_a?(Range) ? to_a : self
 
     count = 0
     while count < list.length
@@ -115,7 +114,8 @@ module Enumerable
   # And it's already reduce the maximum I can, without split method.
   # rubocop:disable Metrics/CyclomaticComplexity
   def my_inject(*args)
-    list = to_a if Range
+    list = is_a?(Range) ? to_a : self
+
     reduce = args[0] if args[0].is_a?(Integer)
     operator = args[0].is_a?(Symbol) ? args[0] : args[1]
 

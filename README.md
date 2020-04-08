@@ -16,7 +16,7 @@ and [Array](https://ruby-doc.org/core-2.4.1/Array.html#method-i-each)
 * [Live Demo](#live-demo)
 * [Quick Start](#quick-start)
 * [Dependencies](#dependencies)
-* [Test Suit](#Test_Suit_Setup)
+* [Test Suit Setup](#Test-Suit-Setup)
 * [Contributing](#contributing)
 * [Acknowledgments](#acknowledgments)
 * [Author](#author)
@@ -65,14 +65,14 @@ git clone git@github.com:SevlaMare/enumerables.git
 
 ### Dependencies
 
-Ruby 2.5.5
+Ruby 2.5.5<br>
 RSpec 3.9
 
 ```js
 gem install rspec
 ```
 
-#### Test Suit Setup
+### Test Suit Setup
 The test suit is:<br>
 spec/main_spec.rb
 <br>

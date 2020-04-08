@@ -4,7 +4,7 @@ require_relative '../main.rb'
 RSpec.describe Enumerable do
   let(:array_numeric) { [-1, 0, 1] }
   let(:array_string) { %w[aaa bb 123 c] }
-  let(:array_unique) { [1] }
+  let(:array_unique) { [nil] }
   let(:range_forward) { (1..3) }
 
   describe '#my_each' do
@@ -107,4 +107,27 @@ RSpec.describe Enumerable do
         .to eql(2)
     end
   end
+
+  describe '#my_inject' do
+    it 'Count elements given as arg.' do
+      expect(range_forward.my_inject(:+))
+        .to eql(6)
+    end
+
+    it 'Count elements given as arg.' do
+      expect(range_forward.my_inject(:-))
+        .to eql(-4)
+    end
+
+    it 'Count elements given as arg.' do
+      expect(range_forward.my_inject(:*))
+        .to eql(6)
+    end
+
+    it 'Count elements given as arg.' do
+      expect(range_forward.my_inject { |sum, n| sum + n })
+        .to eql(6)
+    end
+  end
 end
+# LEFT = all, any, none, multiply_els

@@ -109,24 +109,57 @@ RSpec.describe Enumerable do
   end
 
   describe '#my_inject' do
-    it 'Count elements given as arg.' do
+    it 'Cumulative sum with each element' do
       expect(range_forward.my_inject(:+))
         .to eql(6)
     end
 
-    it 'Count elements given as arg.' do
+    it 'Cumulative minus operation with each element' do
       expect(range_forward.my_inject(:-))
         .to eql(-4)
     end
 
-    it 'Count elements given as arg.' do
+    it 'Cumulative multiply each element' do
       expect(range_forward.my_inject(:*))
         .to eql(6)
     end
 
-    it 'Count elements given as arg.' do
+    it 'Cumulative operation with prevous and next element.' do
       expect(range_forward.my_inject { |sum, n| sum + n })
         .to eql(6)
+    end
+  end
+
+  let(:array_with_nil) { [nil, true, 99] }
+  let(:array_empty) { [] }
+  let(:array_string_v2) { %w[ant bear cat] }
+
+  describe '#my_all' do
+    let(:array_domain_complex) { [1, 2i, 3.14] }
+
+    it 'No block given, still should scan the array' do
+      expect(array_with_nil.my_all?)
+        .to be(false)
+    end
+
+    it 'Works in empty arrays' do
+      expect(array_empty.my_all?)
+        .to be(true)
+    end
+
+    it 'Recognizes different classes of numbers' do
+      expect(array_domain_complex.my_all?(Numeric))
+        .to be(true)
+    end
+
+    it 'Accept blocks' do
+      expect(array_string_v2.my_all? { |word| word.length >= 3 })
+        .to be(true)
+    end
+
+    it 'Should works with Regex' do
+      expect(array_string_v2.my_all?(/t/))
+        .to be(false)
     end
   end
 end

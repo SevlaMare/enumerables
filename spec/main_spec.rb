@@ -1,7 +1,12 @@
-require 'rspec/autorun'
+#  --- VScode setup ---
+# require 'rspec/autorun'
+# require_relative '../main.rb'
+# RSpec.describe Enumerable do
+#  --- VScode setup end ---
+
 require_relative '../main.rb'
 
-RSpec.describe Enumerable do
+describe Enumerable do
   let(:array_numeric) { [-1, 0, 1] }
   let(:array_string) { %w[aaa bb 123 c] }
   let(:array_unique) { [nil] }

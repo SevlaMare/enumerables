@@ -16,6 +16,7 @@ and [Array](https://ruby-doc.org/core-2.4.1/Array.html#method-i-each)
 * [Live Demo](#live-demo)
 * [Quick Start](#quick-start)
 * [Dependencies](#dependencies)
+* [Test Suit](#Test_Suit_Setup)
 * [Contributing](#contributing)
 * [Acknowledgments](#acknowledgments)
 * [Author](#author)
@@ -80,7 +81,7 @@ The file tested is:<br>
 main.rb
 <br>
 
-To run the suit on terminal type:
+To run the tests, on terminal type:
 ```js
 rspec --format documentation
 ```

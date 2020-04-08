@@ -41,7 +41,7 @@ describe Enumerable do
 
     it 'If no block is given, an enumerator is returned.' do
       expect(array_numeric.my_each)
-        .to be_a(Enumerable)
+        .to be_a(Enumerator)
     end
   end
 
@@ -60,14 +60,14 @@ describe Enumerable do
 
     it 'If no block is given, an enumerator is returned.' do
       expect(array_numeric.my_each_with_index)
-        .to be_a(Enumerable)
+        .to be_a(Enumerator)
     end
   end
 
   describe '#my_select' do
     it 'If no block is given, an enumerator is returned.' do
       expect(array_numeric.my_select)
-        .to be_a(Enumerable)
+        .to be_a(Enumerator)
     end
 
     it 'Filter this array' do
@@ -81,7 +81,7 @@ describe Enumerable do
 
     it 'If no block is given, an enumerator is returned.' do
       expect(array_numeric.my_map)
-        .to be_a(Enumerable)
+        .to be_a(Enumerator)
     end
 
     it 'Map this array with math operation' do

@@ -91,10 +91,20 @@ RSpec.describe Enumerable do
     end
   end
 
-  # describe '#my_count' do
-  #   it 'Count elements.' do
-  #     expect(array_numeric.my_count)
-  #       .to be_a(3)
-  #   end
-  # end
+  describe '#my_count' do
+    it 'Count all elements.' do
+      expect(array_numeric.my_count)
+        .to eql(3)
+    end
+
+    it 'Count elements given as arg.' do
+      expect(range_forward.my_count(1))
+        .to eql(1)
+    end
+
+    it 'Count elements given condition.' do
+      expect(array_numeric.my_count(&:odd?))
+        .to eql(2)
+    end
+  end
 end

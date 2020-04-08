@@ -133,10 +133,9 @@ RSpec.describe Enumerable do
   let(:array_with_nil) { [nil, true, 99] }
   let(:array_empty) { [] }
   let(:array_string_v2) { %w[ant bear cat] }
+  let(:array_domain_complex) { [1, 2i, 3.14] }
 
   describe '#my_all' do
-    let(:array_domain_complex) { [1, 2i, 3.14] }
-
     it 'No block given, still should scan the array' do
       expect(array_with_nil.my_all?)
         .to be(false)
@@ -164,8 +163,6 @@ RSpec.describe Enumerable do
   end
 
   describe '#my_any' do
-    let(:array_domain_complex) { [1, 2i, 3.14] }
-
     it 'No block given, still should scan the array' do
       expect(array_with_nil.my_any?)
         .to be(true)
@@ -191,5 +188,32 @@ RSpec.describe Enumerable do
         .to be(true)
     end
   end
+
+  describe '#my_none' do
+    it 'No block given, still should scan the array' do
+      expect(array_with_nil.my_none?)
+        .to be(false)
+    end
+
+    it 'Works in empty arrays' do
+      expect(array_empty.my_none?)
+        .to be(true)
+    end
+
+    it 'Recognizes different classes of numbers' do
+      expect(array_domain_complex.my_none?(Float))
+        .to be(false)
+    end
+
+    it 'Accept blocks' do
+      expect(array_string_v2.my_none? { |word| word.length >= 5 })
+        .to be(true)
+    end
+
+    it 'Should works with Regex' do
+      expect(array_string_v2.my_none?(/t/))
+        .to be(false)
+    end
+  end
 end
-# LEFT = any, none, multiply_els
+# LEFT = multiply_els

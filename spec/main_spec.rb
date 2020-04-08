@@ -6,6 +6,10 @@ RSpec.describe Enumerable do
   let(:array_string) { %w[aaa bb 123 c] }
   let(:array_unique) { [nil] }
   let(:range_forward) { (1..3) }
+  let(:array_with_nil) { [nil, true, 99] }
+  let(:array_empty) { [] }
+  let(:array_string_v2) { %w[ant bear cat] }
+  let(:array_domain_complex) { [1, 2i, 3.14] }
 
   describe '#my_each' do
     context 'Iterates through an array of numbers' do
@@ -130,11 +134,6 @@ RSpec.describe Enumerable do
     end
   end
 
-  let(:array_with_nil) { [nil, true, 99] }
-  let(:array_empty) { [] }
-  let(:array_string_v2) { %w[ant bear cat] }
-  let(:array_domain_complex) { [1, 2i, 3.14] }
-
   describe '#my_all' do
     it 'No block given, still should scan the array' do
       expect(array_with_nil.my_all?)
@@ -215,5 +214,11 @@ RSpec.describe Enumerable do
         .to be(false)
     end
   end
+
+  describe '#multiply_els' do
+    it 'Should test my_inject' do
+      expect(multiply_els([2, 4, 5]))
+        .to be(40)
+    end
+  end
 end
-# LEFT = multiply_els

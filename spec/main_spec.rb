@@ -162,5 +162,34 @@ RSpec.describe Enumerable do
         .to be(false)
     end
   end
+
+  describe '#my_any' do
+    let(:array_domain_complex) { [1, 2i, 3.14] }
+
+    it 'No block given, still should scan the array' do
+      expect(array_with_nil.my_any?)
+        .to be(true)
+    end
+
+    it 'Works in empty arrays' do
+      expect(array_empty.my_any?)
+        .to be(false)
+    end
+
+    it 'Recognizes different classes of numbers' do
+      expect(array_domain_complex.my_any?(Float))
+        .to be(true)
+    end
+
+    it 'Accept blocks' do
+      expect(array_string_v2.my_any? { |word| word.length >= 3 })
+        .to be(true)
+    end
+
+    it 'Should works with Regex' do
+      expect(array_string_v2.my_any?(/t/))
+        .to be(true)
+    end
+  end
 end
-# LEFT = all, any, none, multiply_els
+# LEFT = any, none, multiply_els

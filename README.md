@@ -65,6 +65,26 @@ git clone git@github.com:SevlaMare/enumerables.git
 ### Dependencies
 
 Ruby 2.5.5
+RSpec 3.9
+
+```js
+gem install rspec
+```
+
+#### Test Suit Setup
+The test suit is:<br>
+spec/main_spec.rb
+<br>
+
+The file tested is:<br>
+main.rb
+<br>
+
+To run the suit on terminal type:
+```js
+rspec --format documentation
+```
+
 
 ### Contributing
 
